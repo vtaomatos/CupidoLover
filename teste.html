@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Noturnos</title>
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos da barra de navegação */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .navbar h1 {
+            float: left;
+        }
+
+        .navbar ul {
+            float: right;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Estilos do cabeçalho (hero) */
+        .hero {
+            background-image: url('https://via.placeholder.com/1500x800');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+        }
+
+        /* Estilos dos blocos de seção */
+        .about, .events, .contact {
+            padding: 50px 0;
+        }
+
+        .about h2, .events h2, .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .events {
+            background-color: #f4f4f4;
+        }
+
+        .events .event {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .events .event img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Estilos do rodapé */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Eventos Noturnos</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#events">Eventos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <h2>Bem-vindo aos Eventos Noturnos</h2>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae velit ut lectus sollicitudin congue. Suspendisse vel mauris vitae quam feugiat ullamcorper. Phasellus non hendrerit arcu.</p>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <div class="container">
+            <h2>Próximos Eventos</h2>
+            <div class="event">
+                <img src="https://via.placeholder.com/300x200" alt="Evento 1">
+                <h3>Evento 1</h3>
+                <p>Data: 01/01/2025</p>
+            </div>
+            <div class="event">
+                <img src="https://via.placeholder.com/300x200" alt="Evento 2">
+                <h3>Evento 2</h3>
+                <p>Data: 02/02/2025</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informações sobre nossos eventos.</p>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Eventos Noturnos</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de paralaxe
+        window.addEventListener('scroll', function() {
+            const parallax = document.querySelector('.hero');
+            let scrollPosition = window.pageYOffset;
+
+            parallax.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+        });
+    </script>
+</body>
+</html>
